@@ -19,4 +19,4 @@ while True:
   set_color(255, 255, 255)
   time.sleep(.01)
   set_color(0, 0, 0)
-  time.sleep(.03)
+  time.sleep(2.0)
