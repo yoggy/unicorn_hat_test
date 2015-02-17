@@ -85,12 +85,19 @@ def handle_flash(addr, t, r, g, b):
   set_color(0, 0, 0)
 
 if __name__ == "__main__":
+  # startup animation?
   uh.brightness(.2)
+
+  set_color(255, 0, 0)
+  sleep(1)
+  set_color(255, 255, 0)
+  sleep(1)
+  set_color(0, 255, 0)
+  sleep(2)
   set_color(0, 0, 0)
 
   dispatcher = dispatcher.Dispatcher()
 
-  dispatcher.map("/debug", print)
   dispatcher.map("/brightness", handle_brightness)
   dispatcher.map("/clear",      handle_clear)
   dispatcher.map("/color",      handle_color)
